@@ -1,19 +1,22 @@
 var snowflaxes =[];
 
+function preload(){
+  bgimage = loadImage("snowbackground.jpg");
 
+}
 function setup() {
-  createCanvas(400, 400);
-   for (var i = 0; i < 1000; i++) {
+  createCanvas(800, 400);
+   for (var i = 0; i < 15; i++) {
      snowflaxes.push(new SnowFlakes());
    }
 
 }
 
 function draw() {
-  background(220);
-   for (var i = 0; i < 1000; i++) {
+  background(bgimage);
+   for (var i = 0; i < snowflaxes.length; i++) {
      snowflaxes[i].display();
-    // snowflaxes[i].update();
+     snowflaxes[i].update();
    }
 
 }
