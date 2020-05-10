@@ -1,9 +1,19 @@
+var snowflaxes =[];
+
+
 function setup() {
   createCanvas(400, 400);
-  createSprite(100,100,20,20);
+   for (var i = 0; i < 1000; i++) {
+     snowflaxes.push(new SnowFlakes());
+   }
+
 }
 
 function draw() {
   background(220);
-  drawSprites();
+   for (var i = 0; i < 1000; i++) {
+     snowflaxes[i].display();
+    // snowflaxes[i].update();
+   }
+
 }
